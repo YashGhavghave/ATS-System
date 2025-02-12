@@ -45,7 +45,6 @@ Ensure you have Python installed on your system. You can download it from [pytho
 - 🎛 **Reinforcement Learning** (Model Training & Improvement)
 - 🎨 **Streamlit** (Frontend)
 - 🤖 **Gemini API** (Enhanced Resume Analysis)
-- 🗄️ **MongoDB** (Data Storage)
 
 ## 🚀 Future Enhancements
 - 📈 Implement a more sophisticated feedback loop for better RL tuning.
