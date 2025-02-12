@@ -7,7 +7,7 @@ from stable_baselines3 import PPO
 import google.generativeai as genai
 import os
 
-genai.configure(api_key="AIzaSyB2pMezOsgVcvUaT9QY4m6XLCSiTQ-ACD8")
+genai.configure(api_key="YOUR API KEY HERE")
 
 MODEL_PATH = "resume_rl_model"
 FEEDBACK_CSV = "feedback_data.csv"
