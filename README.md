@@ -53,7 +53,6 @@ Ensure you have Python installed on your system. You can download it from [pytho
 - 🔗 Enhance integration with other AI models for improved predictions.
 
 ## 👥 Contributors
-- **Yash Ghavghave** (AIML Student at FET, DMIHER College)
 - 🌍 Open for contributions! Feel free to submit PRs or raise issues.
 
 ## 📜 License
