@@ -61,4 +61,3 @@ Ensure you have Python installed on your system. You can download it from [pytho
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-For any queries, contact 📧 [your email/contact info].
