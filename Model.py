@@ -1,6 +1,7 @@
 import gym
 import numpy as np
 import pandas as pd
+import streamlit as st
 import os
 from stable_baselines3 import PPO
 from gym import spaces
@@ -59,9 +60,27 @@ env = ResumeScreeningEnv(df)
 model_path = "resume_rl_model.zip"
 if os.path.exists(model_path):
     model = PPO.load(model_path, env)
-    print(" Loaded trained RL model")
+    print("Loaded trained RL model")
 else:
-    print(" No saved model found. Training a new one...")
+    print("No saved model found. Training a new one...")
     model = PPO("MlpPolicy", env, verbose=1)
     model.learn(total_timesteps=10000)
-    model.save(model_path)  
+    model.save(model_path)
+
+
+st.title("AI-Powered Resume Screening")
+st.write("Upload a resume to analyze and classify it.")
+
+uploaded_file = st.file_uploader("Upload Resume (TXT or PDF)", type=["txt", "pdf"])
+
+if uploaded_file is not None:
+    resume_text = uploaded_file.read().decode("utf-8")
+    st.write("### Extracted Resume Data:")
+    extracted_data = extract_resume_features(resume_text)
+    st.write(extracted_data)
+    
+    resume_features = np.array([0.8, 0.7, 0.9], dtype=np.float32)  
+    action, _ = model.predict(resume_features)
+    
+    classification = ["Rejected", "Shortlisted", "Accepted"][action]
+    st.write(f"### Classification: {classification}")
