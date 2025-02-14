@@ -31,7 +31,7 @@ Ensure you have Python installed on your system. You can download it from [pytho
    ```
 4. 🚀 Run the Streamlit application:
    ```sh
-   streamlit run App.py
+   streamlit run ATS.py
    ```
 
 ## 🎯 Usage
